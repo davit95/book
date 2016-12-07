@@ -187,6 +187,9 @@ Route::post('forgot-password/{userId}/{passwordResetCode}', 'FrontEndController@
 Route::group(array('middleware' => 'SentinelUser'), function () {
     Route::get('my-account', array('as' => 'my-account', 'uses' => 'FrontEndController@myAccount'));
     Route::put('my-account', 'FrontEndController@update');
+    Route::get('test',function(){
+        dd('tets');
+    });
 });
 Route::get('logout', array('as' => 'logout','uses' => 'FrontEndController@getLogout'));
 # contact form
